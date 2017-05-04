@@ -5,6 +5,17 @@ class TweetsController < ApplicationController
   end
 
   def create
+
+
+    respond_to do |format|
+
+      format.html do
+        if request.xhr?
+        end
+      end
+
+
+    end
     @tweet = Tweet.new(tweet_params)
 
     if @tweet.save
