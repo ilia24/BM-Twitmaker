@@ -15,9 +15,8 @@ $('#tweet-form').on('submit', function(e) {
       console.log(data)
       var tweet = $('<li>').html(data).attr('class', 'tweet')
       $('.tweets').prepend(tweet)
-    }).fail(function(){
+    }).fail(function(data){
       console.log('ajax submission failed')
-
     }).always(function(){
       console.log('ajax ran')
     });

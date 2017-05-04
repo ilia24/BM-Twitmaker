@@ -22,6 +22,14 @@ class TweetsController < ApplicationController
           end
         end
       end
+
+      format.json do
+        if @tweet.save
+          render json: @tweet
+        end
+      end
+
+
     end
   end
 
